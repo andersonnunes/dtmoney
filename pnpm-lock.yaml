@@ -12,6 +12,7 @@ specifiers:
   '@types/react-modal': ^3.13.1
   '@types/styled-components': ^5.1.24
   '@vitejs/plugin-react': ^1.0.7
+  '@vitest/ui': ^0.7.12
   axios: ^0.26.1
   axios-mock-adapter: ^1.20.0
   c8: ^7.11.0
@@ -50,13 +51,14 @@ devDependencies:
   '@types/react-modal': 3.13.1
   '@types/styled-components': 5.1.24
   '@vitejs/plugin-react': 1.2.0
+  '@vitest/ui': 0.7.12
   axios-mock-adapter: 1.20.0_axios@0.26.1
   c8: 7.11.0
   gh-pages: 3.2.3
   jsdom: 19.0.0
   typescript: 4.6.2
   vite: 2.8.6
-  vitest: 0.7.4_c8@7.11.0+jsdom@19.0.0
+  vitest: 0.7.4_25854b052f333efca7a7efe53a43cd9f
 
 packages:
 
@@ -385,6 +387,10 @@ packages:
     resolution: {integrity: sha512-M/BexG/p05C5lFfMunxo/QcgIJnMT2vDVCd00wNqK2ImZONIlEETZwWJu1QtLxtmYlSHlCFl3JNzp0tLe7OJ5g==}
     dev: false
 
+  /@polka/url/1.0.0-next.21:
+    resolution: {integrity: sha512-a5Sab1C4/icpTZVzZc5Ghpz88yQtGOyNqYXcZgOssB2uuAr+wF/MvN6bgtW32q7HHrvBki+BsZ0OuNv6EV3K9g==}
+    dev: true
+
   /@rollup/pluginutils/4.2.0:
     resolution: {integrity: sha512-2WUyJNRkyH5p487pGnn4tWAsxhEFKN/pT8CMgHshd5H+IXkOnKvKZwsz5ZWz+YCXkleZRAU5kwbfgF8CPfDRqA==}
     engines: {node: '>= 8.0.0'}
@@ -571,6 +577,12 @@ packages:
       resolve: 1.22.0
     transitivePeerDependencies:
       - supports-color
+    dev: true
+
+  /@vitest/ui/0.7.12:
+    resolution: {integrity: sha512-cBhfU5r4jB3oqkdj+5r3Qlsv/AAPLtx23RlT5RGceq/gSCS5r1hDaASUcyRyfc1sA+FuGxj6KJLs9JDsfgQiJQ==}
+    dependencies:
+      sirv: 2.0.2
     dev: true
 
   /abab/2.0.5:
@@ -1834,6 +1846,11 @@ packages:
       pretender: 3.4.7
     dev: false
 
+  /mrmime/1.0.0:
+    resolution: {integrity: sha512-a70zx7zFfVO7XpnQ2IX1Myh9yY4UYvfld/dikWRnsXxbyvMcfz+u6UfgNAtH+k2QqtJuzVpv6eLTx1G2+WKZbQ==}
+    engines: {node: '>=10'}
+    dev: true
+
   /ms/2.1.2:
     resolution: {integrity: sha512-sGkPx+VjMtmA6MX27oA4FBFELFCZZ4S4XqeGOXCv68tT+jb3vk/RyaKWP0PTKyWtmLSM0b+adUTEvbs1PEaH2w==}
 
@@ -2173,6 +2190,15 @@ packages:
     resolution: {integrity: sha512-wnD2ZE+l+SPC/uoS0vXeE9L1+0wuaMqKlfz9AMUo38JsyLSBWSFcHR1Rri62LZc12vLr1gb3jl7iwQhgwpAbGQ==}
     dev: true
 
+  /sirv/2.0.2:
+    resolution: {integrity: sha512-4Qog6aE29nIjAOKe/wowFTxOdmbEZKb+3tsLljaBRzJwtqto0BChD2zzH0LhgCSXiI+V7X+Y45v14wBZQ1TK3w==}
+    engines: {node: '>= 10'}
+    dependencies:
+      '@polka/url': 1.0.0-next.21
+      mrmime: 1.0.0
+      totalist: 3.0.0
+    dev: true
+
   /source-map-js/1.0.2:
     resolution: {integrity: sha512-R0XvVJ9WusLiqTCEiGCmICCMplcCkIwwR11mOSD9CR5u+IXYdiseeEuXCVAjS54zqwkLcPNnmU4OeJ6tUrWhDw==}
     engines: {node: '>=0.10.0'}
@@ -2298,6 +2324,11 @@ packages:
     resolution: {integrity: sha1-3F5pjL0HkmW8c+A3doGk5Og/YW4=}
     engines: {node: '>=4'}
 
+  /totalist/3.0.0:
+    resolution: {integrity: sha512-eM+pCBxXO/njtF7vdFsHuqb+ElbxqtI4r5EAvk6grfAFyJ6IvWlSkfZ5T9ozC6xWw3Fj1fGoSmrl0gUs46JVIw==}
+    engines: {node: '>=6'}
+    dev: true
+
   /tough-cookie/4.0.0:
     resolution: {integrity: sha512-tHdtEpQCMrc1YLrMaqXXcj6AxhYi/xgit6mZu1+EDWUn+qhUf8wMQoFIy9NXuq23zAwtcB0t/MjACGR18pcRbg==}
     engines: {node: '>=6'}
@@ -2377,7 +2408,7 @@ packages:
       fsevents: 2.3.2
     dev: true
 
-  /vitest/0.7.4_c8@7.11.0+jsdom@19.0.0:
+  /vitest/0.7.4_25854b052f333efca7a7efe53a43cd9f:
     resolution: {integrity: sha512-6kyJ/YZJFVj/zEVVHFyvLvAZlbg05yAyJrk7oP+FOCFanGRYK7bBEz4qsIpNHxX+dlf5vRkbBDjpdXzGL7udeA==}
     engines: {node: '>=14.14.0'}
     hasBin: true
@@ -2398,6 +2429,7 @@ packages:
     dependencies:
       '@types/chai': 4.3.0
       '@types/chai-subset': 1.3.3
+      '@vitest/ui': 0.7.12
       c8: 7.11.0
       chai: 4.3.6
       jsdom: 19.0.0
